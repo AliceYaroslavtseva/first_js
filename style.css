@@ -1,0 +1,375 @@
+*,
+*::before,
+*::after { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+/* Глобальные */
+
+a {
+    text-decoration: none;
+    color: #00144D;
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 1px solid #003CE7;
+}
+
+a:hover {
+    color: #003CE7;
+}
+
+h1 {
+    color: #00144D;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #00144D;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: #81A1FD;
+    color: #00144D;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: 1px solid #003CE7;
+    margin: 5px;
+}
+
+/* HEADER */
+
+/* menu */
+
+.menu-flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    background-color: #B2C6FF;
+    height: 40px;
+}
+
+.menu-flexbox > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #003CE7;
+    padding: 5px;
+    text-align: center;
+    height: 100%;
+    width: 200px;
+}
+
+/* header */
+
+.header-flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #5581FF url('./img/flower-backg.jpg') no-repeat center center;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.header-flexbox > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #003CE7;
+    background-color: #5581FF;
+    padding: 5px;
+    text-align: center;
+    height: 100px;
+    width: 350px;
+}
+
+#title {
+    color: #00144D;
+    text-align: center;
+    margin-bottom: 0 auto;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+}
+
+/* BODY */
+
+body {
+    background-color: #B2C6FF;
+}
+
+.slider {
+    height: 600px;
+    width: 25%;
+    margin: 0 auto;
+}
+
+.slider > div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.slider-div-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10 px;
+}
+
+.slider-container {
+    position: relative;
+    height: 90%;
+    width: 100%;
+}
+
+.slider-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#biography {
+    padding: 5px;
+    background-color: #81A1FD;
+    color: #00144D;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.film-flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.film-div-flexbox {
+    background-color: #96b1fd;
+    display: flex;
+    align-items: top;
+    justify-self: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: max-content;
+}
+
+.film-div-flexbox > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #81A1FD;
+    padding: 5px;
+    text-align: center;
+    margin: 10px;
+    height: max-content;
+}
+
+.film-div-flexbox > div > p {
+    justify-content:center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    font-size: 17px;
+    color: #00144D;
+}
+
+.film-div-flexbox > div > b {
+    margin: 0 auto;
+    font-size: 17px;
+    color: #00144D;
+    margin-top: 10px;
+}
+
+#films {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+    color: #00144D;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.tabs {
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #81A1FD;
+    margin-bottom: 20px;
+}
+
+.tab-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #00144D;
+}
+
+.tab-head-elem {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    color: #00144D;
+    font-weight: bold;
+    font-size: 20px;
+}
+.tab-head-elem:hover {
+    border-bottom: 1px solid #003CE7;
+}
+.tab-head-elem.active {
+    border-bottom: 2px solid #003CE7;
+}
+
+.tab-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #96b1fd;
+}
+
+.tab-content-elem {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #00144D;
+    font-size: 18px;
+}
+.tab-content-elem.active {
+    transition: all 250ms;
+    opacity: 1;
+    transform: translateX(0);
+    padding: 10px;
+    position: static;
+}
+
+.tab-content-elem > b {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #003CE7;
+}
+.tab-content-elem > p {
+    margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .slider {
+        height: 600px;
+        width: 45%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slider {
+        height: 550px;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .slider-container {
+        position: relative;
+        height: 85%;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .slider {
+        height: 550px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .slider-container {
+        position: relative;
+        height: 85%;
+        width: 100%;
+    }
+
+    .film-div-flexbox > div {
+        display: flex;
+        flex-direction: column;
+        flex: 1 auto;
+        background-color: #81A1FD;
+        padding: 5px;
+        text-align: center;
+        margin: 10px;
+        height: max-content;
+    } 
+}
+
+@media screen and (max-width: 375px) {
+    .slider {
+        height: 500px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .slider-container {
+        position: relative;
+        height: 85%;
+        width: 100%;
+    }
+
+    .film-div-flexbox > div {
+        display: flex;
+        flex-direction: column;
+        flex: 1 auto;
+        background-color: #81A1FD;
+        padding: 5px;
+        text-align: center;
+        margin: 10px;
+        height: max-content;
+    } 
+}
+
+@media screen and (max-width: 320px) {
+    .slider {
+        height: 400px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .slider-container {
+        position: relative;
+        height: 85%;
+        width: 100%;
+    }
+
+    .film-div-flexbox > div {
+        display: flex;
+        flex-direction: column;
+        flex: 1 auto;
+        background-color: #81A1FD;
+        padding: 5px;
+        text-align: center;
+        margin: 10px;
+        height: max-content;
+    }
+}
